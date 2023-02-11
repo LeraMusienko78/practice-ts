@@ -67,26 +67,46 @@ while(switchers===true){
 
     let status ;
 
-    if ( numberOfFilms > 0 || numberOfFilms< 10){
-        status = "Просмотрено довольно мало фильмов";
+    if ( numberOfFilms > 0 && numberOfFilms < 10){
+        status = "Зритель-любитель";
         alert (status);
         console.log(status);
     }
-    else if(numberOfFilms >=10  || numberOfFilms <30){
+    else if(numberOfFilms >=10  && numberOfFilms <30){
         status = "Вы классический зритель";
         alert(status);
         console.log(status);
     }
-    else if (numberOfFilms >= 30 || numberOfFilms <100){
+    else if (numberOfFilms >= 30 && numberOfFilms < 100){
         status = "Вы киноман !";
         alert(status);
         console.log(status);
     }
     else {
-        status = "Вы , наверное сами снимаете фильмы";
+        status = "Режиссер";
     }
 
-    
+    switch (status){
+
+        case "Зритель-любитель":
+        console.log("Вы любите книги?");
+        alert ("Киноман?")
+        break;
+
+        case "Вы классический зритель":
+        console.log("Еще есть, что смотреть");
+        break;
+
+        case "Вы киноман !":
+        console.log("Ждите новинки");
+        break
+
+        case "Режиссер":
+            alert
+        console.log ("Ждем от Вас новіх фильмов");
+        switchers  = false ;
+
+    }
 
     console.log (personalMovieDB);
     break;
